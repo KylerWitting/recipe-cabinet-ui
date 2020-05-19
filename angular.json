@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": []
           },
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "recipe-cabinet-ui"
+    }
+  },
+  "defaultProject": "recipe-cabinet-ui",
+  "cli": {
+    "analytics": "a6632c99-6798-4004-9778-49a0587a7053"
+  }
 }

@@ -2,6 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
+## Local Build 
+Install Angular 9 and CLI
+
+Visual Studio 
+- Extension: `Angular Essentials (Version 9)`
+
+Things to Install 
+```
+npm install bootstrap
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

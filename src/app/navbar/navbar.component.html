@@ -1,0 +1,36 @@
+<nav
+  class="navbar navbar-light navbar-expand-md bg-faded justify-content-center"
+>
+  <a href="/" class="navbar-brand d-flex w-50 mr-auto">Recipe Cabinet</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapsingNavbar3"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse w-100" id="collapsingNavbar3" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+    <ul class="navbar-nav w-100 justify-content-center">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home">
+          Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="//codeply.com">My Recipes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Saved Recipes</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/profile">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
