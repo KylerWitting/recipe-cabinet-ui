@@ -4,13 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ListRecipesComponent } from './list-recipes/list-recipes.component';
+import { RecipeListComponent } from './recipe/recipe-list/recipe-list.component';
+import { RecipeThumbnailComponent } from './recipe/recipe-thumbnail/recipe-thumbnail.component';
+import { HomeRecipesComponent } from './home/home-recipes/home-recipes.component';
+import { RecipeDetailsComponent } from './recipe/recipe-details/recipe-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ListRecipesComponent,
+    RecipeListComponent,
+    RecipeThumbnailComponent,
+    HomeRecipesComponent,
+    RecipeDetailsComponent,
   ],
   imports: [
     BrowserModule,

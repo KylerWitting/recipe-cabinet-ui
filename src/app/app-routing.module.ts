@@ -1,31 +1,36 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { ListRecipesComponent } from './list-recipes/list-recipes.component';
-
+import { RecipeListComponent } from './recipe/recipe-list/recipe-list.component';
+import { HomeRecipesComponent } from './home/home-recipes/home-recipes.component';
+import { HomeRecipesResolver } from './home/home-recipes/home-recipes-resolver.service';
+import { RecipeDetailsComponent } from './recipe/recipe-details/recipe-details.component';
 
 const routes: Routes = [
   {
     path: 'home',
-    component: ListRecipesComponent,
+    component: HomeRecipesComponent,
+    resolve: { homeRecipes: HomeRecipesResolver },
   },
-  // {
-  //   path: '',
-  //   redirectTo: '/home',
-  //   pathMatch: 'full'
-  // },
+  {
+    path: 'recipe/:id',
+    component: RecipeDetailsComponent,
+  },
   {
     path: 'profile',
-    loadChildren: () => import('./profile/profile.module').then((it) => it.ProfileModule),
+    loadChildren: () =>
+      import('./profile/profile.module').then((it) => it.ProfileModule),
   },
-
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules})
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [
-    RouterModule
-  ]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

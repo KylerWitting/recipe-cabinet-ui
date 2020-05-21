@@ -1,0 +1,15 @@
+<div id="thumbnail">
+  <div id="thumbnailHead">
+    <h2 class="well hoverwell thumbnail">
+      <a [routerLink]="['/recipe', recipe?.id]">{{
+        recipe?.title | uppercase
+      }}</a>
+    </h2>
+  </div>
+  <div id="thumbnailBody">
+    <a [routerLink]="['/profile/information', recipe?.profile?.authorId]">
+      Author: {{ recipe?.profile?.authorName }}
+    </a>
+    <div>{{ recipe?.summary }}</div>
+  </div>
+</div>

@@ -1,8 +1,7 @@
 import { NgModule } from "@angular/core";
 import { ProfileInformationComponent } from './profile-information/profile-information.component';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { profileRoutes } from './profile-routing.module'
+import { ProfileRoutingModule } from './profile-routing.module'
 
 @NgModule({
     declarations: [
@@ -10,7 +9,7 @@ import { profileRoutes } from './profile-routing.module'
     ],
     imports: [
       CommonModule,
-      RouterModule.forChild(profileRoutes)
+      ProfileRoutingModule
     ],
     providers: [
 

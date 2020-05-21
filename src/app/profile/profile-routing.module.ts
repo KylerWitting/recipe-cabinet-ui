@@ -3,6 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProfileInformationComponent } from './profile-information/profile-information.component';
 
 export const profileRoutes: Routes = [
+  // {
+  //   path: 'information',
+  //   redirectTo: 'information/',
+  //   pathMatch: 'full'
+  // },
   {
     path: 'information',
     component: ProfileInformationComponent,
@@ -10,11 +15,13 @@ export const profileRoutes: Routes = [
   {
     path: '',
     redirectTo: 'information',
+    pathMatch: 'full',
   },
+
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(profileRoutes)],
+  imports: [RouterModule.forChild(profileRoutes)],
   exports: [RouterModule],
 })
 export class ProfileRoutingModule {}

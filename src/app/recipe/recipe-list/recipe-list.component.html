@@ -1,0 +1,9 @@
+<div>
+  <h1>Recipe List</h1>
+  <hr />
+  <div class="row">
+    <div *ngFor="let recipe of recipes" class="col-md-5">
+      <recipe-thumbnail [recipe]="recipe"></recipe-thumbnail>
+    </div>
+  </div>
+</div>
