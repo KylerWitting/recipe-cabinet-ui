@@ -1,7 +1,7 @@
 <nav
   class="navbar navbar-light navbar-expand-md bg-faded justify-content-center"
 >
-  <a href="/" class="navbar-brand d-flex w-50 mr-auto">Recipe Cabinet</a>
+  <a class="navbar-brand d-flex w-50 mr-auto">Recipe Cabinet</a>
   <button
     class="navbar-toggler"
     type="button"
@@ -10,23 +10,46 @@
   >
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="navbar-collapse collapse w-100" id="collapsingNavbar3" >
+  <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
     <ul class="navbar-nav w-100 justify-content-center">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
           Home
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="//codeply.com">My Recipes</a>
+        <a
+          class="nav-link"
+          routerLink="/cookbook"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Cookbook
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Saved Recipes</a>
+        <a
+          class="nav-link"
+          routerLink="/references"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >References</a
+        >
       </li>
     </ul>
     <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/profile" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <a
+          class="nav-link"
+          routerLink="/profile"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
           Profile
         </a>
       </li>

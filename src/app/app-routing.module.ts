@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { RecipeListComponent } from './recipe/recipe-list/recipe-list.component';
 import { HomeRecipesComponent } from './home/home-recipes/home-recipes.component';
 import { HomeRecipesResolver } from './home/home-recipes/home-recipes-resolver.service';
 import { RecipeDetailsComponent } from './recipe/recipe-details/recipe-details.component';
+import { ReferencesComponent } from './references/references.component';
 
 const routes: Routes = [
   {
@@ -21,8 +21,17 @@ const routes: Routes = [
       import('./profile/profile.module').then((it) => it.ProfileModule),
   },
   {
+    path: 'cookbook',
+    loadChildren: () =>
+      import('./cookbook/cookbook.module').then((it) => it.CookbookModule),
+  },
+  {
+    path: 'references',
+    component: ReferencesComponent,
+  },
+  {
     path: '',
-    redirectTo: '',
+    redirectTo: '/home',
     pathMatch: 'full'
   }
 ];
